@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Friendly, step-by-step guides to Applied Energistics 2, GregTech, and GT New Horizons.">
+  <title>Workshop Notes | Modded Minecraft guides</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to guide content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Workshop Notes home"><span class="wordmark-icon" aria-hidden="true">W</span> Workshop Notes</a>
+    <p class="header-note">Modded Minecraft, one clear step at a time.</p>
+    <div class="reading-controls" aria-label="Reading controls">
+      <button id="smaller-text" type="button" aria-label="Make text smaller" title="Make text smaller">A−</button>
+      <button id="larger-text" type="button" aria-label="Make text larger" title="Make text larger">A+</button>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="side-panel" aria-label="Guide navigation">
+      <p class="side-label">YOUR GUIDES</p>
+      <nav class="guide-nav">
+        <a class="nav-link" href="#home"><span class="nav-number">00</span> Start here</a>
+        <a class="nav-link" href="#ae2-1710"><span class="nav-number">01</span> AE2 · Minecraft 1.7.10</a>
+        <a class="nav-link" href="#ae2-modern"><span class="nav-number">02</span> AE2 · latest release</a>
+        <a class="nav-link" href="#gregtech"><span class="nav-number">03</span> GregTech basics</a>
+        <a class="nav-link" href="#gtnh"><span class="nav-number">04</span> GT New Horizons</a>
+      </nav>
+      <div class="side-note">
+        <span class="online-dot" aria-hidden="true"></span>
+        <p>Made to read at your pace.<br><a href="https://github.com/FlamingPhoenixOfficial/Guides">Suggest a correction</a></p>
+      </div>
+    </aside>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <section id="home" class="view home-view">
+        <div class="intro-band">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A PLAYER-FRIENDLY FIELD GUIDE</div>
+          <h1>Big mods.<br><span>Smaller steps.</span></h1>
+          <p class="intro-copy">Understand the machines, storage, and progression in your modpack without having to learn everything at once.</p>
+          <a class="primary-link" href="#gtnh">Start with GT New Horizons <span aria-hidden="true">→</span></a>
+          <div class="intro-art" aria-label="A simple diagram: learn one step, check the result, then continue." role="img">
+            <div class="art-step"><span class="art-index">01</span><strong>Learn one thing</strong></div>
+            <span class="art-arrow" aria-hidden="true">→</span>
+            <div class="art-step"><span class="art-index">02</span><strong>Try it in game</strong></div>
+            <span class="art-arrow" aria-hidden="true">→</span>
+            <div class="art-step"><span class="art-index">03</span><strong>Check what changed</strong></div>
+          </div>
+        </div>
+
+        <div class="notice" role="note">
+          <span class="notice-mark" aria-hidden="true">!</span>
+          <div><h2>These guides may not be accurate</h2>
+            <p>Mods and modpacks change. A recipe or machine here may not match your version. Check the quest book and the official wiki for your pack. Found a mistake or want to add a guide? <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls">Open a pull request on GitHub</a>.</p>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><p class="eyebrow">PICK A GUIDE</p><h2>What are you playing?</h2></div>
+          <p class="section-aside">Each guide starts with the basics.<br>You can come back whenever you need.</p>
+        </div>
+        <div class="guide-cards">
+          <a class="guide-card card-green" href="#ae2-1710"><span class="card-index">01 / STORAGE</span><span class="card-icon" aria-hidden="true">▤</span><h3>Applied Energistics 2</h3><p>Older Minecraft 1.7.10 version</p><span class="card-link">Open this guide <span aria-hidden="true">↗</span></span></a>
+          <a class="guide-card card-yellow" href="#ae2-modern"><span class="card-index">02 / STORAGE</span><span class="card-icon" aria-hidden="true">▤</span><h3>Applied Energistics 2</h3><p>Latest upstream release. Check your pack first.</p><span class="card-link">Open this guide <span aria-hidden="true">↗</span></span></a>
+          <a class="guide-card card-red" href="#gregtech"><span class="card-index">03 / MACHINES</span><span class="card-icon" aria-hidden="true">⌁</span><h3>GregTech</h3><p>Power, machines, and voltage made clearer</p><span class="card-link">Open this guide <span aria-hidden="true">↗</span></span></a>
+          <a class="guide-card card-blue" href="#gtnh"><span class="card-index">04 / FULL MODPACK</span><span class="card-icon" aria-hidden="true">✳</span><h3>GT New Horizons</h3><p>A first-day guide and a map of what comes next</p><span class="card-link">Open this guide <span aria-hidden="true">↗</span></span></a>
+        </div>
+        <div class="site-note"><span aria-hidden="true">i</span><p><strong>Need another format?</strong> Use the A− and A+ buttons to change text size. You can also use your browser's zoom. The guides are written with short steps, simple explanations, and clear checkpoints.</p></div>
+      </section>
+
+      <article id="ae2-1710" class="view guide-view" aria-labelledby="ae2-old-title">
+        <div class="guide-topline"><span>GUIDE 01</span><span>STORAGE SYSTEMS</span></div>
+        <p class="eyebrow">APPLIED ENERGISTICS 2 · OLDER VERSION</p>
+        <h1 id="ae2-old-title">AE2 in Minecraft 1.7.10</h1>
+        <p class="guide-lede">Build a computer-like storage network. Put items in one place, then find them from connected terminals.</p>
+        <div class="version-alert"><strong>Version matters.</strong> This guide is for the old Minecraft 1.7.10 era of AE2. Recipes and modpack rules vary. Check the recipe in NEI or your pack's own item browser before crafting.</div>
+        <figure class="guide-illustration"><a class="illustration-link" href="assets/ae2-1710-network.png" target="_blank" rel="noopener"><img src="assets/ae2-1710-network.png" width="1200" height="700" loading="lazy" decoding="async" alt="Four-step AE2 storage diagram: provide power to the network, connect blocks with ME cable, put cells in a drive, and use a terminal to find items."><span>Open the full-size picture guide ↗</span></a><figcaption>How the parts of a small storage network fit together. Recipes and power connections vary by pack.</figcaption></figure>
+        <nav class="contents" aria-label="On this page"><strong>ON THIS PAGE</strong><a href="#old-start">Start here</a><a href="#old-build">Build a small network</a><a href="#old-cells">Store items</a><a href="#old-channels">Channels, simply explained</a><a href="#old-fix">When it does not work</a><a href="#old-words">Quick word list</a></nav>
+
+        <section id="old-start" class="lesson" data-searchable><p class="step-label">01 · FIRST, THE IDEA</p><h2>What does AE2 do?</h2>
+          <p>Applied Energistics 2 (AE2) moves items through a network. You use a screen called a <strong>terminal</strong> to see and request those items.</p>
+          <div class="flow-diagram" aria-label="Items go into a chest, through an ME network, and appear at a terminal"><span>Items</span><b aria-hidden="true">→</b><span>ME network</span><b aria-hidden="true">→</b><span>Terminal</span></div>
+          <p><strong>ME</strong> means Matter Energy. It is the name used for AE2's storage network. Think of the network as a small connected computer.</p>
+        </section>
+        <section id="old-build" class="lesson" data-searchable><p class="step-label">02 · A SMALL FIRST BUILD</p><h2>Build a basic network</h2>
+          <p>Start small. You do not need automation or a giant room of machines.</p>
+          <ol class="task-list"><li><label><input type="checkbox" data-check="old-1"> <span><strong>Check the recipes.</strong> Use NEI, the recipe viewer included with many 1.7.10 packs. Search for “ME Controller,” “ME Drive,” and “ME Terminal.”</span></label></li><li><label><input type="checkbox" data-check="old-2"> <span><strong>Make a power supply.</strong> AE2 machines need energy. Follow the energy parts listed in NEI for your pack.</span></label></li><li><label><input type="checkbox" data-check="old-3"> <span><strong>Place an ME Controller.</strong> It is the main block that keeps a normal ME network running.</span></label></li><li><label><input type="checkbox" data-check="old-4"> <span><strong>Connect an ME Drive and a terminal</strong> to the controller with compatible ME cable.</span></label></li><li><label><input type="checkbox" data-check="old-5"> <span><strong>Make a storage cell.</strong> Put it in the ME Drive. Cells are the network's item containers.</span></label></li><li><label><input type="checkbox" data-check="old-6"> <span><strong>Open the terminal.</strong> Put a few items in. Check that they appear in the list.</span></label></li></ol>
+          <p class="checkpoint"><strong>Checkpoint:</strong> If the terminal opens and shows your items, your basic network works.</p>
+        </section>
+        <section id="old-cells" class="lesson" data-searchable><p class="step-label">03 · UNDERSTAND YOUR STORAGE</p><h2>A cell is not one big box</h2>
+          <p>A storage cell has <strong>a total space limit</strong> and <strong>a limit on how many different item types</strong> it can hold. Lots of different items can fill the type limit before the cell looks full.</p>
+          <ul class="plain-list"><li><strong>ME Drive:</strong> Holds storage cells.</li><li><strong>Storage cell:</strong> Stores items. Read its tooltip for its limits.</li><li><strong>ME Terminal:</strong> Lets you view, put in, and take out stored items.</li></ul>
+          <p>Keep some cells empty as a backup. If one type of item fills the available space, extra items might not go into that cell.</p>
+        </section>
+        <section id="old-channels" class="lesson" data-searchable><p class="step-label">04 · A COMMON CONFUSION</p><h2>Channels, simply explained</h2>
+          <p>In many 1.7.10 AE2 versions, a network has a limit on how many devices its cables can support. Each device can use a channel. The ME Controller supplies channels.</p>
+          <p>Use ordinary ME cable for a small network. Use <strong>dense cable</strong> when you need more channels on one cable path. The exact numbers depend on the version and pack.</p>
+          <p>Some packs disable channels or change their rules. If a device says “no channel,” check the pack's AE2 settings and the cable path before rebuilding everything.</p>
+        </section>
+        <section id="old-fix" class="lesson" data-searchable><p class="step-label">05 · QUICK TROUBLESHOOTING</p><h2>The terminal is blank or offline</h2>
+          <ol class="number-list"><li>Check that the network has power.</li><li>Check that every block touches a connected cable or network block.</li><li>Check that the ME Drive contains a working storage cell.</li><li>Look at the device for an error such as “no channel.”</li><li>Check the exact item recipe in NEI. The pack may change it.</li></ol>
+        </section>
+        <section id="old-words" class="lesson" data-searchable><p class="step-label">06 · KEEP THESE WORDS HANDY</p><h2>Quick word list</h2><dl class="glossary"><dt>Network</dt><dd>Connected AE2 blocks that share power and storage.</dd><dt>Cell</dt><dd>A removable item container placed in an ME Drive.</dd><dt>Channel</dt><dd>A connection limit for devices in versions that use channels.</dd><dt>NEI</dt><dd>Not Enough Items. A recipe and item browser used by many 1.7.10 packs.</dd></dl>
+          <p class="source-note">Sources: <a href="https://appliedenergistics.org/ae2-site-archive/">Archived AE2 documentation</a> · <a href="https://github.com/FlamingPhoenixOfficial/Guides">Suggest a correction</a>. The archived site may not document every modpack change.</p>
+        </section>
+        <a class="back-link" href="#home">← Back to all guides</a>
+      </article>
+
+      <article id="ae2-modern" class="view guide-view" aria-labelledby="ae2-new-title">
+        <div class="guide-topline"><span>GUIDE 02</span><span>STORAGE SYSTEMS</span></div>
+        <p class="eyebrow">APPLIED ENERGISTICS 2 · LATEST UPSTREAM RELEASE</p>
+        <h1 id="ae2-new-title">AE2: current-release guide</h1>
+        <p class="guide-lede">The same big idea as older AE2: connect machines to a powered network, then store and find items through a terminal.</p>
+        <div class="version-alert"><strong>Latest upstream release checked 12 October 2026: v26.1.13-beta.</strong> A modpack may include a different AE2 version or change its recipes and settings. This guide explains the shared basics; check the version shown in your launcher and use the matching <a href="https://guide.appliedenergistics.org/">official documentation</a>.</div>
+        <figure class="guide-illustration"><a class="illustration-link" href="assets/ae2-current-crafting.png" target="_blank" rel="noopener"><img src="assets/ae2-current-crafting.png" width="1200" height="700" loading="lazy" decoding="async" alt="Four-step AE2 crafting diagram: store items in a cell, save a recipe as a pattern, connect the crafting provider and assembler, then request one item from a terminal."><span>Open the full-size picture guide ↗</span></a><figcaption>Automatic crafting comes after storage. Block names and layouts depend on your AE2 version.</figcaption></figure>
+        <nav class="contents" aria-label="On this page"><strong>ON THIS PAGE</strong><a href="#modern-start">What changed?</a><a href="#modern-build">Your first network</a><a href="#modern-storage">Cells and item types</a><a href="#modern-craft">Automatic crafting</a><a href="#modern-fix">When it does not work</a><a href="#modern-words">Quick word list</a></nav>
+        <section id="modern-start" class="lesson" data-searchable><p class="step-label">01 · THE BIG IDEA</p><h2>What changed in newer versions?</h2>
+          <p>The basic idea is familiar: connect AE2 blocks, power the network, and use a terminal. Names, recipes, textures, and options can differ from Minecraft 1.7.10.</p><p>In some newer setups, channels can be turned off or work differently. Do not assume that an old tutorial's channel count or recipe matches your game.</p><p class="checkpoint"><strong>Before building:</strong> Look up the AE2 version in your launcher or mod list. Open the official guide for that version.</p>
+        </section>
+        <section id="modern-build" class="lesson" data-searchable><p class="step-label">02 · A SMALL FIRST BUILD</p><h2>Make a storage network</h2>
+          <ol class="task-list"><li><label><input type="checkbox" data-check="modern-1"> <span><strong>Find the recipes</strong> in your pack's recipe viewer. Search for the controller, a drive, a terminal, cables, and a storage cell.</span></label></li><li><label><input type="checkbox" data-check="modern-2"> <span><strong>Make the required power parts.</strong> Follow recipes for your installed version.</span></label></li><li><label><input type="checkbox" data-check="modern-3"> <span><strong>Connect a controller, drive, and terminal</strong> with the cable listed in your recipe viewer.</span></label></li><li><label><input type="checkbox" data-check="modern-4"> <span><strong>Put a storage cell into the drive.</strong> The drive needs a cell to hold items.</span></label></li><li><label><input type="checkbox" data-check="modern-5"> <span><strong>Open the terminal and test one item.</strong> Put the item in, close the screen, then reopen it.</span></label></li></ol>
+          <p class="checkpoint"><strong>Checkpoint:</strong> Your test item stays in the list after you close and reopen the terminal.</p>
+        </section>
+        <section id="modern-storage" class="lesson" data-searchable><p class="step-label">03 · KEEP ITEMS ORGANIZED</p><h2>Cells have limits</h2>
+          <p>A cell is limited by the amount of stored data and by the number of different item types. Read the cell tooltip to see its limits.</p><p>Use a cell workbench or the pack's cell tool to control which items a cell accepts, if your version includes it. A cell with a filter is useful for items you want to keep separate.</p><p>For a safe first setup, use more than one cell rather than trying to fit everything into one.</p>
+        </section>
+        <section id="modern-craft" class="lesson" data-searchable><p class="step-label">04 · WHEN STORAGE WORKS</p><h2>Try automatic crafting later</h2>
+          <p>Automatic crafting tells AE2 how to make an item, then asks the network to make it for you. It is a separate project. Get basic storage working first.</p>
+          <ol class="number-list"><li>A <strong>pattern</strong> is a recipe card for the network.</li><li>A <strong>molecular assembler</strong> crafts the recipe.</li><li>An <strong>interface</strong> or <strong>pattern provider</strong> gives the recipe and ingredients to the crafting setup. The name depends on your version.</li><li>Use the crafting terminal to request one test item. Read any missing-item message.</li></ol>
+          <p>First test a small recipe with ingredients you already have. Do not begin with a large factory.</p>
+        </section>
+        <section id="modern-fix" class="lesson" data-searchable><p class="step-label">05 · QUICK TROUBLESHOOTING</p><h2>Check these in order</h2>
+          <ol class="number-list"><li>Does the network have power?</li><li>Are the blocks connected with the right cable?</li><li>Is there a storage cell in the drive?</li><li>Does your version require channels? Read the device's warning.</li><li>Does the recipe match this pack's recipe viewer?</li></ol>
+        </section>
+        <section id="modern-words" class="lesson" data-searchable><p class="step-label">06 · KEEP THESE WORDS HANDY</p><h2>Quick word list</h2>
+          <dl class="glossary"><dt>Cell</dt><dd>The removable part that stores items inside a drive.</dd><dt>Pattern</dt><dd>A recipe or instruction stored for the AE2 network.</dd><dt>Channel</dt><dd>A connection limit that may be enabled, disabled, or changed.</dd><dt>Recipe viewer</dt><dd>The in-game screen that shows how your pack makes an item.</dd></dl>
+          <p class="source-note">Sources: <a href="https://guide.appliedenergistics.org/">Official AE2 guide</a> · <a href="https://github.com/AppliedEnergistics/Applied-Energistics-2/releases">AE2 releases</a>. Pick documentation that matches your installed version.</p>
+        </section>
+        <a class="back-link" href="#home">← Back to all guides</a>
+      </article>
+
+      <article id="gregtech" class="view guide-view" aria-labelledby="gregtech-title">
+        <div class="guide-topline"><span>GUIDE 03</span><span>POWER &amp; MACHINES</span></div>
+        <p class="eyebrow">GREGTECH · STARTER GUIDE</p>
+        <h1 id="gregtech-title">GregTech, one machine at a time</h1>
+        <p class="guide-lede">GregTech adds many machines and recipes. The key habit is simple: check the recipe, check the power, then run one test.</p>
+        <div class="version-alert"><strong>There are different GregTech versions.</strong> GregTech 5, GregTech Community Edition, GregTech CEu, and pack-specific forks can work differently. The examples below use common GregTech-style ideas. Use your modpack's recipe viewer and quest book as the final answer.</div>
+        <figure class="guide-illustration"><a class="illustration-link" href="assets/gregtech-power.png" target="_blank" rel="noopener"><img src="assets/gregtech-power.png" width="1200" height="700" loading="lazy" decoding="async" alt="Four-step GregTech machine diagram: check the recipe and machine tier, match voltage, connect a power source using a correctly rated cable, and test one recipe."><span>Open the full-size picture guide ↗</span></a><figcaption>Check the recipe and machine tier before connecting power. Too much voltage can damage a machine.</figcaption></figure>
+        <nav class="contents" aria-label="On this page"><strong>ON THIS PAGE</strong><a href="#gt-terms">Three useful ideas</a><a href="#gt-voltage">Voltage and tiers</a><a href="#gt-machine">Run a machine</a><a href="#gt-power">Cables and power</a><a href="#gt-fix">When it does not work</a><a href="#gt-words">Quick word list</a></nav>
+        <section id="gt-terms" class="lesson" data-searchable><p class="step-label">01 · THREE USEFUL IDEAS</p><h2>Start with these</h2>
+          <p><strong>EU</strong> is a kind of electricity used by GregTech and some other mods.</p><p><strong>Voltage</strong> is the power tier a machine can accept. <strong>Amperage</strong> is how many units of power can travel at once.</p><p>A recipe also has requirements. A machine may need the right voltage, enough power, and all the ingredients.</p>
+          <div class="fact-strip"><span class="fact-number">1</span><p><strong>Recipe:</strong> What goes in, what comes out, and which machine to use.</p></div><div class="fact-strip"><span class="fact-number">2</span><p><strong>Voltage:</strong> Whether the machine can safely accept the power tier.</p></div><div class="fact-strip"><span class="fact-number">3</span><p><strong>Connection:</strong> Whether the cable links the power source to the machine.</p></div>
+        </section>
+        <section id="gt-voltage" class="lesson" data-searchable><p class="step-label">02 · POWER TIERS</p><h2>Voltage rises by tier</h2>
+          <p>In common GregTech 5-style tiers, each step has a higher voltage. These are familiar early tiers, but pack versions and exact rules can differ.</p>
+          <div class="tier-list"><div><span>ULV</span><strong>Very early power</strong></div><div><span>LV</span><strong>32 V</strong></div><div><span>MV</span><strong>128 V</strong></div><div><span>HV</span><strong>512 V</strong></div><div><span>EV</span><strong>2,048 V</strong></div></div>
+          <p class="warning-inline"><strong>Important:</strong> A voltage that is too high can break a machine in many GregTech versions. Do not guess. Check the machine's tier and the power output before connecting it.</p>
+          <p>Power needs depend on the recipe. A machine that is fast enough for one recipe may not have enough power for another.</p>
+        </section>
+        <section id="gt-machine" class="lesson" data-searchable><p class="step-label">03 · RUN ONE RECIPE</p><h2>Use this safe routine</h2>
+          <ol class="task-list"><li><label><input type="checkbox" data-check="gt-1"> <span><strong>Look up the item.</strong> Open its recipe in your pack's recipe viewer. Note the machine, ingredients, and power tier.</span></label></li><li><label><input type="checkbox" data-check="gt-2"> <span><strong>Check the machine label.</strong> Use the tool tip, side panel, quest book, or manual to find its tier.</span></label></li><li><label><input type="checkbox" data-check="gt-3"> <span><strong>Connect the correct power.</strong> Check the output of the power source and the cable rating.</span></label></li><li><label><input type="checkbox" data-check="gt-4"> <span><strong>Put in only the recipe ingredients.</strong> Match the slots shown in the recipe viewer.</span></label></li><li><label><input type="checkbox" data-check="gt-5"> <span><strong>Run one test.</strong> Check that the progress bar moves and the output appears.</span></label></li></ol>
+          <p class="checkpoint"><strong>Checkpoint:</strong> The machine completes one recipe without a warning or damage.</p>
+        </section>
+        <section id="gt-power" class="lesson" data-searchable><p class="step-label">04 · CONNECT THINGS CAREFULLY</p><h2>Cables carry power</h2>
+          <p>GregTech cables have limits. Their material can set the voltage they can handle, and their size can affect how much power they carry and how much is lost.</p><ul class="plain-list"><li>Read the cable's tooltip before placing it.</li><li>Use a cable rated for the machine's voltage.</li><li>Keep cables short when you can. Some cables lose power over distance.</li><li>Leave some space between power sources and machines until you understand their connection rules.</li></ul>
+          <p>Different machines can use different sides for power. Check the machine face or its instructions; do not assume every side works.</p>
+        </section>
+        <section id="gt-fix" class="lesson" data-searchable><p class="step-label">05 · QUICK TROUBLESHOOTING</p><h2>The machine will not start</h2>
+          <ol class="number-list"><li><strong>No power?</strong> Check the generator, cable connection, and machine input side.</li><li><strong>Wrong tier?</strong> Check that the voltage matches what the machine can accept.</li><li><strong>Recipe will not start?</strong> Compare every ingredient and the selected recipe.</li><li><strong>Not enough power?</strong> Add power generation or try a less demanding recipe.</li><li><strong>Still stuck?</strong> Read the quest book and search the exact error in your pack's wiki.</li></ol>
+        </section>
+        <section id="gt-words" class="lesson" data-searchable><p class="step-label">06 · KEEP THESE WORDS HANDY</p><h2>Quick word list</h2>
+          <dl class="glossary"><dt>EU</dt><dd>GregTech's electricity system.</dd><dt>Voltage</dt><dd>The strength or tier of the electrical input.</dd><dt>Amperage</dt><dd>How many units of power are sent together.</dd><dt>Tier</dt><dd>A level. Higher tiers usually need stronger materials and machines.</dd><dt>Recipe viewer</dt><dd>An in-game tool that shows how to make items in your pack.</dd></dl>
+          <p class="source-note">Reference: <a href="https://wiki.gtnewhorizons.com/wiki/Main_Page">GT New Horizons Wiki</a> · <a href="https://github.com/GTNewHorizons/GT5-Unofficial">GT5-Unofficial source</a>. This guide is not a substitute for your specific pack's rules.</p>
+        </section>
+        <a class="back-link" href="#home">← Back to all guides</a>
+      </article>
+
+      <article id="gtnh" class="view guide-view" aria-labelledby="gtnh-title">
+        <div class="guide-topline"><span>GUIDE 04</span><span>THE WHOLE MODPACK</span></div>
+        <p class="eyebrow">GT NEW HORIZONS · A GENTLE START</p>
+        <h1 id="gtnh-title">Your first steps in GTNH</h1>
+        <p class="guide-lede">GT New Horizons is a long progression modpack for Minecraft 1.7.10. The quest book helps you learn one stage at a time.</p>
+        <div class="version-alert"><strong>Use the quest book first.</strong> GTNH is actively updated. Recipes and progression change. This is a calm orientation guide, not a replacement for your installed version's quests and the official wiki.</div>
+        <figure class="guide-illustration"><a class="illustration-link" href="assets/gtnh-progression.png" target="_blank" rel="noopener"><img src="assets/gtnh-progression.png" width="1200" height="700" loading="lazy" decoding="async" alt="Four-stage GT New Horizons overview: survive with food and shelter, learn steam machines, start electricity and LV, then follow quests into higher tiers and new goals."><span>Open the full-size picture guide ↗</span></a><figcaption>A broad overview, not a strict schedule. Follow the quests in your installed pack.</figcaption></figure>
+        <nav class="contents" aria-label="On this page"><strong>ON THIS PAGE</strong><a href="#gtnh-about">What is GTNH?</a><a href="#gtnh-firstday">First day</a><a href="#gtnh-quests">Follow the quests</a><a href="#gtnh-progress">The big progression map</a><a href="#gtnh-survival">Survival reminders</a><a href="#gtnh-help">Where to find help</a><a href="#gtnh-words">Quick word list</a></nav>
+        <section id="gtnh-about" class="lesson" data-searchable><p class="step-label">01 · WHAT YOU ARE PLAYING</p><h2>A long game with a guidebook</h2>
+          <p>GTNH combines technology, exploration, magic, and survival. GregTech machines and voltage tiers shape much of the technology progression.</p><p>It is designed to take a long time. You do not need to understand the whole pack today. The in-game quest book has thousands of quests, explains many tasks, and can show item recipes when you click items.</p>
+          <div class="progress-map" aria-label="The pack starts with basic survival, then steam, then electricity, then higher machine tiers and later exploration"><div><span>START</span><strong>Survive</strong></div><b aria-hidden="true">→</b><div><span>BUILD</span><strong>Steam</strong></div><b aria-hidden="true">→</b><div><span>LEARN</span><strong>Electricity</strong></div><b aria-hidden="true">→</b><div><span>GROW</span><strong>Higher tiers</strong></div></div>
+          <p>This is a map, not a deadline. Your quest book gives the exact next task for your version.</p>
+        </section>
+        <section id="gtnh-firstday" class="lesson" data-searchable><p class="step-label">02 · YOUR FIRST PLAY SESSION</p><h2>Make the first day manageable</h2>
+          <ol class="task-list"><li><label><input type="checkbox" data-check="gtnh-1"> <span><strong>Read the starting quests.</strong> Open the quest book and begin at “And So, It Begins” or the first available starting quest.</span></label></li><li><label><input type="checkbox" data-check="gtnh-2"> <span><strong>Gather basic supplies.</strong> Follow the quest steps. Do one objective, then check it off before moving on.</span></label></li><li><label><input type="checkbox" data-check="gtnh-3"> <span><strong>Make a safe, lit place to return to.</strong> GTNH nights can be very dark. Keep a bed and light near your home when possible.</span></label></li><li><label><input type="checkbox" data-check="gtnh-4"> <span><strong>Gather different foods.</strong> Food variety matters in this pack. Keep more than one kind of food available.</span></label></li><li><label><input type="checkbox" data-check="gtnh-5"> <span><strong>Pause and make a backup chest.</strong> Put spare tools and useful items somewhere safe before exploring.</span></label></li></ol>
+          <p class="checkpoint"><strong>Checkpoint:</strong> You have a safe place, light, food, and a clear next quest. That is enough for now.</p>
+        </section>
+        <section id="gtnh-quests" class="lesson" data-searchable><p class="step-label">03 · YOUR IN-GAME HELPER</p><h2>Let the quest book lead</h2>
+          <p>When a quest asks for an item, click the item in the quest. In many GTNH versions, this opens the recipe in NEI, the in-game recipe browser.</p>
+          <ol class="number-list"><li>Read the quest's full description.</li><li>Click an item to see its recipe.</li><li>Make one required item at a time.</li><li>Return to the quest and check the requirement.</li><li>If the recipe does not match, trust the game you installed and check the official wiki.</li></ol>
+          <p>It is normal to have several open goals. Pick one small task and finish it before starting a new machine line.</p>
+        </section>
+        <section id="gtnh-progress" class="lesson" data-searchable><p class="step-label">04 · THE BIG PICTURE</p><h2>Progress happens in stages</h2>
+          <p>The official quest categories show this broad path. Names or order may differ slightly with pack releases.</p>
+          <div class="era-list"><div><span class="era-dot era-stone"></span><div><strong>Stone age</strong><p>Learn basic tools and survival.</p></div></div><div><span class="era-dot era-steam"></span><div><strong>Steam</strong><p>Build early machines and learn to supply them.</p></div></div><div><span class="era-dot era-lv"></span><div><strong>LV, then MV and HV</strong><p>Begin electricity. Learn recipes, voltage, cables, and machine tiers.</p></div></div><div><span class="era-dot era-later"></span><div><strong>EV and beyond</strong><p>Unlock more machines, processing, automation, and new goals.</p></div></div><div><span class="era-dot era-space"></span><div><strong>Exploration and late game</strong><p>Later quests can send you to other dimensions and planets.</p></div></div></div>
+          <p>Some quests cover food, building, machines, power, magic, and exploration at the same time. You do not have to finish every side quest before you can take the next step.</p>
+        </section>
+        <section id="gtnh-survival" class="lesson" data-searchable><p class="step-label">05 · SMALL THINGS THAT HELP</p><h2>Make survival easier</h2>
+          <ul class="plain-list"><li><strong>Darkness:</strong> Place lights near your base before night.</li><li><strong>Food:</strong> Eat different kinds of food. Repeating one food is less helpful in this pack.</li><li><strong>Mining:</strong> Ore appears in large veins. Explore carefully and mark places you want to find again.</li><li><strong>Power:</strong> Check voltage before connecting a machine. Too much voltage can damage it.</li><li><strong>Materials:</strong> Store spare parts and label chests. Complex recipes use many steps.</li><li><strong>Rest:</strong> Save a note about your current goal. You can stop and return later.</li></ul>
+        </section>
+        <section id="gtnh-help" class="lesson" data-searchable><p class="step-label">06 · OFFICIAL HELP AND SOURCES</p><h2>Find the answer for your version</h2>
+          <ul class="source-list"><li><a href="https://wiki.gtnewhorizons.com/wiki/Main_Page"><strong>GTNH Wiki</strong><span>Pack guides, installation help, and machine information.</span></a></li><li><a href="https://github.com/GTNewHorizons/GT-New-Horizons-Modpack"><strong>GTNH Modpack repository</strong><span>Pack releases, quest files, and mod list.</span></a></li><li><a href="https://www.gtnewhorizons.com/downloads/"><strong>GTNH downloads</strong><span>Official modpack download information.</span></a></li><li><a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls"><strong>Improve this guide</strong><span>Suggest a correction or contribute a new page.</span></a></li></ul>
+          <p class="source-note">This guide uses the public GTNH README and quest category list as a starting point. The wiki and your in-game quest book have fuller, version-specific information.</p>
+        </section>
+        <section id="gtnh-words" class="lesson" data-searchable><p class="step-label">07 · KEEP THESE WORDS HANDY</p><h2>Quick word list</h2>
+          <dl class="glossary"><dt>Quest book</dt><dd>The in-game list of tasks and explanations.</dd><dt>NEI</dt><dd>The in-game search and recipe browser used in GTNH.</dd><dt>Voltage tier</dt><dd>A machine and power level, such as LV or MV.</dd><dt>Automation</dt><dd>A setup that repeats a task for you.</dd><dt>Modpack</dt><dd>A group of Minecraft mods configured to work together.</dd></dl>
+        </section>
+        <a class="back-link" href="#home">← Back to all guides</a>
+      </article>
+      <footer class="site-footer"><a href="https://github.com/FlamingPhoenixOfficial/Guides">Workshop Notes on GitHub</a><span>Community notes, not official mod documentation.</span><a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls">Suggest a change ↗</a></footer>
+    </main>
+  </div>
+</body>
+</html>
