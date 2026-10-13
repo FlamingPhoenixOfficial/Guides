@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guide site for all — plain guides for everyone</title>
-  <meta name="description" content="Guide site for all. Free, plain-language, step-by-step guides. Right now: Applied Energistics 2 for Minecraft 1.7.10, and Applied Energistics 2 for modern Minecraft." />
+  <meta name="description" content="Free, plain-language, step-by-step gaming guides, organised by game. Explore Minecraft, World of Warcraft, RuneScape, and more." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='5' fill='%236d28d9'/%3E%3Cpath d='M16 7l4 6-4 12-4-12z' fill='%23c4b5fd'/%3E%3Cpath d='M16 7l4 6h-8z' fill='%23ede9fe'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -129,14 +129,34 @@
       <!-- Guide library -->
       <div class="section-head" id="guides">
         <p class="overline">The library</p>
-        <h2>Pick a guide</h2>
-        <p class="section-sub">Two guides so far. More will come — this site grows with pull requests from readers like you.</p>
+        <h2>Find your game</h2>
+        <p class="section-sub">Choose a game category to find its guides. Some categories are ready for future guides.</p>
       </div>
 
-      <div class="cards">
-        <article class="guide-card">
+      <div class="library-controls">
+        <label for="category-filter">Show a game category</label>
+        <select id="category-filter" aria-controls="guide-library">
+          <option value="all">All games</option>
+          <option value="minecraft">Minecraft</option>
+          <option value="hytale">Hytale</option>
+          <option value="old-school-runescape">Old School RuneScape</option>
+          <option value="runescape">RuneScape</option>
+          <option value="dragonwilds">RuneScape: Dragonwilds</option>
+          <option value="wow">World of Warcraft</option>
+          <option value="ffxiv">Final Fantasy XIV</option>
+          <option value="guild-wars-2">Guild Wars 2</option>
+          <option value="eso">The Elder Scrolls Online</option>
+          <option value="terraria">Terraria</option>
+          <option value="stardew-valley">Stardew Valley</option>
+          <option value="skyrim">The Elder Scrolls V: Skyrim</option>
+        </select>
+        <p class="library-count" id="library-count" aria-live="polite">Showing all game categories</p>
+      </div>
+
+      <div class="cards" id="guide-library">
+        <article class="guide-card" data-category="minecraft">
           <div class="card-top">
-            <span class="card-badge badge-old"><i data-lucide="package" aria-hidden="true"></i>Minecraft 1.7.10</span>
+            <span class="card-badge badge-old"><i data-lucide="package" aria-hidden="true"></i>Minecraft · 1.7.10</span>
             <span class="card-icon" aria-hidden="true"><i data-lucide="cpu"></i></span>
           </div>
           <h3>Applied Energistics 2 — the classic way</h3>
@@ -153,9 +173,9 @@
           </div>
         </article>
 
-        <article class="guide-card">
+        <article class="guide-card" data-category="minecraft">
           <div class="card-top">
-            <span class="card-badge badge-new"><i data-lucide="sparkles" aria-hidden="true"></i>Minecraft 1.20 / 1.21</span>
+            <span class="card-badge badge-new"><i data-lucide="sparkles" aria-hidden="true"></i>Minecraft · 1.20 / 1.21</span>
             <span class="card-icon" aria-hidden="true"><i data-lucide="network"></i></span>
           </div>
           <h3>Applied Energistics 2 — the modern way</h3>
@@ -172,19 +192,142 @@
           </div>
         </article>
 
-        <article class="guide-card soon-card" aria-label="More guides are coming">
+        <article class="guide-card" data-category="wow">
           <div class="card-top">
-            <span class="card-badge badge-soon"><i data-lucide="hammer" aria-hidden="true"></i>Coming soon</span>
-            <span class="card-icon" aria-hidden="true"><i data-lucide="library-big"></i></span>
+            <span class="card-badge badge-new"><i data-lucide="sparkles" aria-hidden="true"></i>World of Warcraft · Addons</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="wrench"></i></span>
           </div>
-          <h3>Your guide could be here</h3>
-          <p class="card-blurb">Know a game or mod that needs a kind, careful guide? This site is open to everyone. Fix a mistake or add a guide with a pull request.</p>
+          <h3>Make your first World of Warcraft addon</h3>
+          <p class="card-blurb">Create a small addon with a manifest and Lua file, load it in game, and learn how to keep it working after updates.</p>
           <ul class="card-meta">
-            <li><i data-lucide="git-pull-request" aria-hidden="true"></i>Open source</li>
-            <li><i data-lucide="users" aria-hidden="true"></i>Made by readers</li>
+            <li><i data-lucide="list-ordered" aria-hidden="true"></i>5 chapters</li>
+            <li><i data-lucide="clock" aria-hidden="true"></i>About 15 minutes</li>
+            <li><i data-lucide="smile" aria-hidden="true"></i>Beginner friendly</li>
           </ul>
           <div class="card-foot">
-            <a class="btn btn-ghost" href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Open pull requests<i data-lucide="external-link" aria-hidden="true"></i></a>
+            <a class="btn btn-primary" href="#/guide/wow-addon" data-route>Start this guide<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            <span class="steps-mini" data-steps-mini="wow-addon"></span>
+          </div>
+        </article>
+
+        <article class="guide-card category-card" data-category="hytale">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>Sandbox RPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="blocks"></i></span>
+          </div>
+          <h3>Hytale</h3>
+          <p class="card-blurb">A home for beginner-friendly Hytale guides. No guides have been published here yet.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="old-school-runescape">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>MMORPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="swords"></i></span>
+          </div>
+          <h3>Old School RuneScape</h3>
+          <p class="card-blurb">A dedicated category for Old School RuneScape tips and step-by-step guides.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="runescape">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>MMORPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="swords"></i></span>
+          </div>
+          <h3>RuneScape</h3>
+          <p class="card-blurb">A separate category for the current RuneScape game, distinct from Old School RuneScape.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="dragonwilds">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>Survival RPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="dragon"></i></span>
+          </div>
+          <h3>RuneScape: Dragonwilds</h3>
+          <p class="card-blurb">A separate place for guides to RuneScape’s co-operative survival adventure.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="ffxiv">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>MMORPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="sparkles"></i></span>
+          </div>
+          <h3>Final Fantasy XIV</h3>
+          <p class="card-blurb">A place for friendly guides to Eorzea, its jobs, crafting, and group content.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="guild-wars-2">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>MMORPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="shield"></i></span>
+          </div>
+          <h3>Guild Wars 2</h3>
+          <p class="card-blurb">A place for approachable guides to Tyria, its professions, exploration, and events.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="eso">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>MMORPG</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="scroll-text"></i></span>
+          </div>
+          <h3>The Elder Scrolls Online</h3>
+          <p class="card-blurb">A category for practical guides to Tamriel, its stories, builds, and crafting.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="terraria">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>Offline-capable</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="pickaxe"></i></span>
+          </div>
+          <h3>Terraria</h3>
+          <p class="card-blurb">A home for offline-friendly Terraria guides, from first shelter to later bosses.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="stardew-valley">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>Offline-capable</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="wheat"></i></span>
+          </div>
+          <h3>Stardew Valley</h3>
+          <p class="card-blurb">A place for calm, practical guides to farming, friendship, and the valley.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="guide-card category-card" data-category="skyrim">
+          <div class="card-top">
+            <span class="card-badge badge-soon"><i data-lucide="gamepad-2" aria-hidden="true"></i>Offline-capable</span>
+            <span class="card-icon" aria-hidden="true"><i data-lucide="mountain"></i></span>
+          </div>
+          <h3>The Elder Scrolls V: Skyrim</h3>
+          <p class="card-blurb">A category for offline Skyrim guides, including beginner help and modding basics.</p>
+          <div class="card-foot">
+            <span class="steps-mini">Guides coming soon</span>
+            <a href="https://github.com/FlamingPhoenixOfficial/Guides/pulls" target="_blank" rel="noopener">Suggest a guide<i data-lucide="external-link" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -2835,6 +2978,137 @@
             </div>
           </section>
 
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ GUIDE 3: A first World of Warcraft addon ============ -->
+    <article class="view guide" id="view-guide-wow-addon" data-view-name="guide" data-guide="wow-addon" data-title="Make your first World of Warcraft addon" aria-labelledby="wow-title">
+      <header class="guide-hero">
+        <a class="back-link" href="#/" data-route><i data-lucide="arrow-left" aria-hidden="true"></i>All games</a>
+        <p class="overline">Guide 3 · World of Warcraft · Addon basics</p>
+        <h1 id="wow-title">Make your first <span class="hl">World of Warcraft addon</span></h1>
+        <p class="lede">Create a tiny addon that prints a message when your character enters the world. You will make its folder, write its manifest and Lua code, then test it safely in game.</p>
+        <ul class="guide-meta">
+          <li><i data-lucide="list-ordered" aria-hidden="true"></i>5 chapters</li>
+          <li><i data-lucide="clock" aria-hidden="true"></i>About 15 minutes</li>
+          <li><i data-lucide="list-checks" aria-hidden="true"></i><span data-steps-total>…</span> steps you can tick</li>
+          <li><i data-lucide="accessibility" aria-hidden="true"></i>Plain language</li>
+        </ul>
+        <div class="guide-progress" role="group" aria-label="Your progress in this guide">
+          <div class="guide-progress-track"><span class="guide-progress-bar" data-progress-bar></span></div>
+          <p class="guide-progress-text" data-progress-text>Loading your saved progress…</p>
+          <div class="guide-progress-actions">
+            <button type="button" class="btn btn-small btn-ghost" data-reset-steps><i data-lucide="rotate-ccw" aria-hidden="true"></i>Untick every step</button>
+            <button type="button" class="btn btn-small btn-ghost" data-print><i data-lucide="printer" aria-hidden="true"></i>Print this guide</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="guide-layout">
+        <aside class="toc" aria-label="Chapters in this guide">
+          <details class="toc-mobile">
+            <summary><i data-lucide="list" aria-hidden="true"></i>On this page</summary>
+            <nav class="toc-nav toc-nav-mobile" data-toc-mobile></nav>
+          </details>
+          <nav class="toc-nav toc-nav-side" data-toc></nav>
+        </aside>
+        <div class="guide-content">
+          <section class="chapter" id="wow-about">
+            <p class="chapter-kicker">Chapter 1</p>
+            <h2>What you are making</h2>
+            <p>A World of Warcraft addon is a small folder of text files that the game reads when it starts. This first addon listens for the <strong>PLAYER_LOGIN</strong> event and prints a welcome message in your chat window.</p>
+            <div class="note note-warn">
+              <span class="note-icon"><i data-lucide="shield-alert" aria-hidden="true"></i></span>
+              <div>
+                <p class="note-title">Only install addons you trust</p>
+                <p>Addons are code. Get them from sources you trust, read files before running unfamiliar code, and never share your account password or security codes with an addon author. The game restricts what addons can do, especially during combat.</p>
+              </div>
+            </div>
+            <ol class="steps">
+              <li class="step"><label class="step-check"><input type="checkbox" data-step="wow-prep-1" /><span class="box" aria-hidden="true"></span></label>
+                <div class="step-body"><p class="step-title">Close World of Warcraft before changing addon files.</p><p>This avoids editing a file while the game is loading it.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="chapter" id="wow-files">
+            <p class="chapter-kicker">Chapter 2</p>
+            <h2>Create the addon folder</h2>
+            <p>Find the game folder for the version you play. Retail and Classic use different folders. In that version’s folder, open <strong>Interface</strong>, then <strong>AddOns</strong>.</p>
+            <pre class="code-block"><code>World of Warcraft/
+  _retail_/
+    Interface/
+      AddOns/
+        FirstAddon/</code></pre>
+            <p>If you play a Classic client, use its matching game folder instead of <code class="code">_retail_</code>. The exact folder name can change between Classic clients.</p>
+            <ol class="steps">
+              <li class="step"><label class="step-check"><input type="checkbox" data-step="wow-files-1" /><span class="box" aria-hidden="true"></span></label>
+                <div class="step-body"><p class="step-title">Create a folder named <code class="code">FirstAddon</code> inside the correct version’s <code class="code">Interface/AddOns</code> folder.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="chapter" id="wow-manifest">
+            <p class="chapter-kicker">Chapter 3</p>
+            <h2>Write the addon manifest</h2>
+            <p>The manifest is a text file that tells the game the addon’s name and which files to load. Save it inside <code class="code">FirstAddon</code> as <code class="code">FirstAddon.toc</code>. Make sure your text editor does not add <code class="code">.txt</code> to the end.</p>
+            <pre class="code-block"><code>## Interface: 120000
+## Title: First Addon
+## Notes: My first small World of Warcraft addon
+## Author: Your name
+FirstAddon.lua</code></pre>
+            <p><strong>Important:</strong> The Interface number in this example is only a sample. Replace it with the current interface number for your game client before testing or sharing the addon. You can find the number in the <code class="code">.toc</code> file of a recently updated addon for the same client. It changes with game updates.</p>
+            <ol class="steps">
+              <li class="step"><label class="step-check"><input type="checkbox" data-step="wow-toc-1" /><span class="box" aria-hidden="true"></span></label>
+                <div class="step-body"><p class="step-title">Create <code class="code">FirstAddon.toc</code>, add the manifest lines, and use the current Interface number.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="chapter" id="wow-lua">
+            <p class="chapter-kicker">Chapter 4</p>
+            <h2>Add a small Lua script</h2>
+            <p>Create <code class="code">FirstAddon.lua</code> in the same folder. This code listens for the player’s login event, then writes one message to chat.</p>
+            <pre class="code-block"><code>local frame = CreateFrame("Frame")
+
+frame:RegisterEvent("PLAYER_LOGIN")
+frame:SetScript("OnEvent", function()
+    print("FirstAddon loaded. Hello, Azeroth!")
+end)</code></pre>
+            <p><code class="code">PLAYER_LOGIN</code> happens when the game finishes logging in your character. <code class="code">print</code> writes text to the chat window. This addon does not change your character or automate gameplay.</p>
+            <ol class="steps">
+              <li class="step"><label class="step-check"><input type="checkbox" data-step="wow-lua-1" /><span class="box" aria-hidden="true"></span></label>
+                <div class="step-body"><p class="step-title">Save the Lua example as <code class="code">FirstAddon.lua</code> beside the manifest.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="chapter" id="wow-test">
+            <p class="chapter-kicker">Chapter 5</p>
+            <h2>Load, test, and maintain it</h2>
+            <p>Start the matching game client and open the character-select screen. Open the <strong>AddOns</strong> list. If the addon is listed, enable it. If the game says it is out of date, check the Interface number and confirm you chose the right client folder.</p>
+            <ol class="steps">
+              <li class="step"><label class="step-check"><input type="checkbox" data-step="wow-test-1" /><span class="box" aria-hidden="true"></span></label>
+                <div class="step-body"><p class="step-title">Enable <strong>First Addon</strong> from the character-select AddOns list, then enter the game.</p></div>
+              </li>
+              <li class="step"><label class="step-check"><input type="checkbox" data-step="wow-test-2" /><span class="box" aria-hidden="true"></span></label>
+                <div class="step-body"><p class="step-title">Look for “FirstAddon loaded. Hello, Azeroth!” in chat after login.</p><p>If it does not appear, recheck the folder name, file extensions, manifest filename, and Interface number.</p></div>
+              </li>
+            </ol>
+            <div class="note note-info">
+              <span class="note-icon"><i data-lucide="info" aria-hidden="true"></i></span>
+              <div>
+                <p class="note-title">Game updates can change addon APIs</p>
+                <p>When a patch arrives, check current addon documentation and update the Interface number. Use Blizzard’s UI source and current community documentation to confirm which APIs are supported. Do not build addons that automate play or bypass the game’s protected-action rules.</p>
+              </div>
+            </div>
+            <p>For reference, see the <a href="https://warcraft.wiki.gg/wiki/World_of_Warcraft_API" target="_blank" rel="noopener">World of Warcraft API guide</a> and Blizzard’s <a href="https://github.com/Gethe/wow-ui-source" target="_blank" rel="noopener">UI source repository</a>. Both can change; check that examples match your client version.</p>
+            <div class="note note-check">
+              <span class="note-icon"><i data-lucide="circle-check" aria-hidden="true"></i></span>
+              <div><p class="note-title">Well done</p><p>You made and loaded an addon. From here, add one small feature at a time and test it after each change.</p></div>
+            </div>
+          </section>
         </div>
       </div>
     </article>

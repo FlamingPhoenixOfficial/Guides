@@ -1,6 +1,6 @@
-# Workshop Notes
+# Guide site for all
 
-A static, no-build guide site for Applied Energistics 2, GregTech, and GT New Horizons. The pages use plain HTML, CSS, and JavaScript; there are no packages or build steps.
+A static, no-build library of plain-language game guides. The site uses HTML, CSS, and JavaScript; there are no packages or build steps.
 
 ## Preview locally
 
@@ -15,8 +15,10 @@ Open `index.html` in a browser, or serve this directory with any static web serv
 
 The site is built from `index.html` in the repository root. No custom domain or GitHub Actions workflow is required.
 
-## Update the guides
+## Update the library and guides
 
-Edit `index.html` to change guide content and `styles.css` to change presentation. The self-hosted PNG diagrams are in `assets/`; update their matching image and alt text together. The site does not need an image service or a build step. Keep version warnings and upstream documentation links current. Guide checkboxes and the text-size setting are stored in each reader's browser.
+Edit `index.html` to add game categories, library cards, or guide content. Each library item uses a `data-category` value that matches an option in the category selector. Update `app.js` when adding a guide so its route, reading progress, and chapter navigation work. Edit `style.css` to change presentation.
 
-Guides are community notes, not official documentation. Recipes, tiers, and progression can change between Minecraft versions and modpacks. Please verify claims against the installed pack and link the relevant source when you submit a correction.
+Keep version notes and upstream documentation links current. World of Warcraft addon APIs and interface numbers change with game updates. Guide checkboxes and reading settings are stored in each reader's browser.
+
+Guides are community notes, not official documentation. Game systems, recipes, and addon APIs can change. Please verify claims against the current game and link the relevant source when you submit a correction.

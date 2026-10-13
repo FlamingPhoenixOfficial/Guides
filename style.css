@@ -430,6 +430,27 @@ html[data-theme="dark"] .scene-shadow { fill: rgba(0, 0, 0, 0.5); }
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.4rem;
 }
+.library-controls {
+  max-width: 1180px;
+  margin: 1rem auto 0;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem 1rem;
+  flex-wrap: wrap;
+}
+.library-controls label { font-weight: 700; }
+.library-controls select {
+  min-width: min(100%, 280px);
+  padding: 0.65rem 2.5rem 0.65rem 0.9rem;
+  border: 2px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--bg-panel);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+}
+.library-count { margin: 0; color: var(--ink-2); font-size: 0.92rem; }
 .guide-card {
   background: var(--bg-panel);
   border: 2px solid var(--line);
@@ -500,6 +521,28 @@ html[data-theme="dark"] .badge-new { color: var(--c-mach-l); }
 .steps-mini { font-size: 0.85rem; color: var(--ink-2); font-weight: 600; }
 .soon-card { border-style: dashed; opacity: 0.88; }
 .soon-card:hover { border-color: var(--brand); }
+.category-card { border-style: dashed; }
+.category-card .card-foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  text-decoration-thickness: 1.5px;
+}
+.category-card .card-foot a svg { width: 16px; height: 16px; }
+
+.code-block {
+  overflow-x: auto;
+  margin: 1rem 0;
+  padding: 1rem 1.15rem;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--bg-inset);
+  color: var(--ink);
+  font: 0.88rem/1.65 ui-monospace, "SF Mono", Consolas, monospace;
+  tab-size: 4;
+}
+.code-block code { font: inherit; white-space: pre; }
 
 /* ---------- Home: how it helps ---------- */
 .how { max-width: 1180px; margin: 2.5rem auto 0; padding: 0 1.25rem 2rem; }

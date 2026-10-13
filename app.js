@@ -14,7 +14,8 @@
 
   var GUIDES = {
     "ae2-1710": { viewId: "view-guide-ae2-1710", title: "Applied Energistics 2 for 1.7.10" },
-    "ae2-modern": { viewId: "view-guide-ae2-modern", title: "Applied Energistics 2 for modern Minecraft" }
+    "ae2-modern": { viewId: "view-guide-ae2-modern", title: "Applied Energistics 2 for modern Minecraft" },
+    "wow-addon": { viewId: "view-guide-wow-addon", title: "Make your first World of Warcraft addon" }
   };
 
   /* ---------------- storage helpers ---------------- */
@@ -89,6 +90,33 @@
     toast(calm ? "Calm mode on — animations off" : "Animations back on");
   });
   syncSettingButtons();
+
+  /* ---------------- game category filter ---------------- */
+  var categoryFilter = doc.getElementById("category-filter");
+  var libraryCount = doc.getElementById("library-count");
+  var libraryItems = Array.prototype.slice.call(doc.querySelectorAll("#guide-library [data-category]"));
+
+  function updateLibrary() {
+    if (!categoryFilter || !libraryCount) return;
+    var category = categoryFilter.value;
+    var visible = 0;
+    libraryItems.forEach(function (item) {
+      var matches = category === "all" || item.getAttribute("data-category") === category;
+      item.hidden = !matches;
+      if (matches) visible++;
+    });
+    if (category === "all") {
+      libraryCount.textContent = "Showing all " + visible + " library items";
+    } else {
+      var label = categoryFilter.options[categoryFilter.selectedIndex].textContent;
+      libraryCount.textContent = "Showing " + visible + (visible === 1 ? " item" : " items") + " in " + label;
+    }
+  }
+
+  if (categoryFilter) {
+    categoryFilter.addEventListener("change", updateLibrary);
+    updateLibrary();
+  }
 
   /* ---------------- hash router ---------------- */
   var views = Array.prototype.slice.call(doc.querySelectorAll(".view"));
